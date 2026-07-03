@@ -6,6 +6,6 @@ __pycache__/
 .DS_Store
 .vscode/
 .idea/
-data/*.csv
+data/input.csv
 uploads/
 temp/
