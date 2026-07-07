@@ -1,0 +1,11 @@
+venv/
+__pycache__/
+*.pyc
+.env
+*.log
+.DS_Store
+.vscode/
+.idea/
+data/tesla_q4_2024.txt
+uploads/
+temp/
