@@ -270,4 +270,4 @@ This project is open source and available under the [MIT License](LICENSE).
 ## Contact
 
 - **GitHub:** [Esha-Mirza](https://github.com/Esha-Mirza)
-- **Email:** your.email@example.com
+- **Email:** esha101374@gmail.com
