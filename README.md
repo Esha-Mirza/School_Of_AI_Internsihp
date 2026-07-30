@@ -1,45 +1,35 @@
-School of AI Internship - Complete Project Portfolio
-Table of Contents
-Overview
+# School of AI Internship - Complete Project Portfolio
 
-Why This Portfolio Exists
+A comprehensive collection of 25 AI/ML projects completed during my AI internship. Each project demonstrates practical applications of Large Language Models (LLMs), multi-agent systems, and modern AI development tools.
 
-Quick Start
+---
 
-Project Categories
+## Table of Contents
 
-Technology Stack
+- [Overview](#overview)
+- [Quick Start](#quick-start)
+- [Project Categories](#project-categories)
+- [Technology Stack](#technology-stack)
+- [Project Overview](#project-overview)
+- [Model Requirements](#model-requirements)
+- [Installation Guide](#installation-guide)
+- [License](#license)
 
-Project Overview
+---
 
-Model Requirements
+## Overview
 
-Installation Guide
-
-Contributing
-
-License
-
-Overview
-This repository showcases 25 AI-powered applications built during my School of AI Internship. Each project demonstrates practical applications of Large Language Models (LLMs), multi-agent systems, and modern AI development tools across diverse domains including healthcare, finance, education, security, and legal tech.
+This repository showcases 25 AI-powered applications built during my School of AI Internship. Each project addresses a specific real-world problem across diverse domains including healthcare, finance, education, security, and legal tech.
 
 All projects are designed to run locally using Ollama for LLM inference, with FastAPI backends and Streamlit frontends.
 
-Why This Portfolio Exists
-This collection represents a systematic exploration of applied AI across different problem domains. Each project addresses a specific use case with a practical implementation:
+---
 
-Real-World Focus: Every project solves an actual problem—from summarizing medical notes to analyzing earnings calls or planning travel itineraries.
+## Quick Start
 
-Progressive Complexity: The portfolio begins with single-model applications (text summarization, sentiment analysis) and advances to complex multi-agent systems with persistent memory, scheduling, voice integration, and collaborative workflows.
-
-Production-Ready Patterns: All projects follow consistent architectural patterns with clear separation between backend APIs and frontend interfaces, making them maintainable and extensible.
-
-Local-First Design: Everything runs on your laptop with local models through Ollama—no API costs, no data privacy concerns.
-
-Quick Start
-bash
+```bash
 # Clone the repository
-git clone https://github.com/yourusername/School_Of_AI_Internship.git
+git clone https://github.com/Esha-Mirza/School_Of_AI_Internship.git
 cd School_Of_AI_Internship
 
 # Navigate to any project directory
@@ -53,7 +43,7 @@ venv\Scripts\activate        # Windows
 # Install dependencies
 pip install -r requirements.txt
 
-# Pull the required Ollama model (varies by project)
+# Pull the required Ollama model
 ollama pull llama2
 
 # Start the application
@@ -223,17 +213,10 @@ venv\Scripts\activate        # Windows
 # Install dependencies
 pip install -r requirements.txt
 
-# Pull required Ollama model (check project README)
+# Pull required Ollama model
 ollama pull llama2
 
 # Start the application
-# Option 1: Streamlit-only projects
-streamlit run frontend/app.py
-
-# Option 2: Projects with backend (FastAPI + Streamlit)
-# Terminal 1 - Backend
-uvicorn backend.main:app --reload
-# Terminal 2 - Frontend
 streamlit run frontend/app.py
 Project Structure
 Each project follows a consistent structure:
@@ -249,17 +232,6 @@ Project-XX_ProjectName/
 ├── requirements.txt     # Dependencies
 ├── README.md           # Project documentation
 └── .gitignore
-Contributing
-Fork the repository
-
-Create a feature branch (git checkout -b feature/amazing-feature)
-
-Commit your changes (git commit -m 'Add some amazing feature')
-
-Push to the branch (git push origin feature/amazing-feature)
-
-Open a Pull Request
-
 License
 This repository is open source and available under the MIT License.
 
@@ -279,7 +251,6 @@ Streamlit - UI framework
 TinyDB - Lightweight database
 
 Contact
-GitHub: yourusername
+GitHub: Esha-Mirza
 
-Email: your.email@example.com
-
+Email: esha101374@email.com
