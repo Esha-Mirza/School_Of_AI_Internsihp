@@ -2,6 +2,10 @@
 
 A comprehensive collection of 25 AI/ML projects completed during my AI internship. Each project demonstrates practical applications of Large Language Models (LLMs), multi-agent systems, and modern AI development tools.
 
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
+![License](https://img.shields.io/badge/License-MIT-green)
+![Ollama](https://img.shields.io/badge/LLM-Ollama-black)
+
 ---
 
 ## Table of Contents
@@ -13,7 +17,10 @@ A comprehensive collection of 25 AI/ML projects completed during my AI internshi
 - [Project Overview](#project-overview)
 - [Model Requirements](#model-requirements)
 - [Installation Guide](#installation-guide)
+- [Project Structure](#project-structure)
 - [License](#license)
+- [Acknowledgments](#acknowledgments)
+- [Contact](#contact)
 
 ---
 
@@ -37,8 +44,7 @@ cd "Project-1 Text Summarizer"
 
 # Create and activate virtual environment
 python -m venv venv
-venv\Scripts\activate        # Windows
-# source venv/bin/activate   # Mac/Linux
+venv\Scripts\activate
 
 # Install dependencies
 pip install -r requirements.txt
@@ -48,128 +54,134 @@ ollama pull llama2
 
 # Start the application
 streamlit run frontend/app.py
+```
+
 Each project directory contains its own README with specific setup instructions.
 
-Project Categories
-Natural Language Processing & Text Analysis
-Text Summarizer: Summarize long documents and articles
+---
 
-Sentiment Analyzer: Classify text as Positive, Neutral, or Negative
+## Project Categories
 
-Meeting Notes Generator: Transcribe and summarize meeting audio
+### Natural Language Processing & Text Analysis
+- **Text Summarizer** — Summarize long documents and articles
+- **Sentiment Analyzer** — Classify text as Positive, Neutral, or Negative
+- **Meeting Notes Generator** — Transcribe and summarize meeting audio
+- **Product Review Analyzer** — Analyze customer reviews with sentiment and topic extraction
 
-Product Review Analyzer: Analyze customer reviews with sentiment and topic extraction
+### Healthcare & Medical Applications
+- **Medical Note Structuring** — Convert unstructured clinical notes into structured EMR-ready data
+- **Mental Health Companion** — Journaling and emotional well-being support
 
-Healthcare & Medical Applications
-Medical Note Structuring: Convert unstructured clinical notes into structured EMR-ready data
+### Legal & Compliance
+- **Legal Document Analyzer** — Extract clauses, entities, and summaries from legal documents
+- **Grant Proposal Assistant** — Draft and refine grant proposals
 
-Mental Health Companion: Journaling and emotional well-being support
+### Business & Finance
+- **Earnings Call Analyzer** — Extract insights from financial transcripts
+- **Agile Standup Tracker** — Asynchronous team standup management
 
-Medical Diagnosis Support: Clinical decision support (educational prototype)
+### Multi-Agent Systems
+- **Multi-Agent Research Assistant** — Collaborative research with specialized agents
+- **AthenaCore** — Multi-agent system with shared persistent memory
+- **Visual Timeline** — Agent collaboration visualization
+- **Voice-Controlled Agent** — Voice-enabled multi-agent interaction
+- **Scheduled Workflow** — Automated agent runs with scheduling
+- **Document Intelligence** — Collaborative document analysis
 
-Legal & Compliance
-Legal Document Analyzer: Extract clauses, entities, and summaries from legal documents
+### Education & Learning
+- **AI Tutor & Quiz Generator** — Educational content simplification and assessment
+- **Agent-Guided Learning Coach** — Personalized tutoring system
+- **Academic Research Collaborator** — Research assistance for scholars
 
-Grant Proposal Assistant: Draft and refine grant proposals
+### Developer Tools
+- **Code Review Assistant** — Code analysis, bug detection, and optimization
+- **Resume & Interview Coach** — Career preparation and job application support
 
-Business & Finance
-Earnings Call Analyzer: Extract insights from financial transcripts
+### Other Domains
+- **Image Caption Generator** — Vision-language model for image description
+- **Travel Planning Assistant** — AI-powered trip planning
+- **Cybersecurity Incident Agent** — Security operations and incident response
 
-Agile Standup Tracker: Asynchronous team standup management
+---
 
-Product Review Analyzer: Business intelligence from customer feedback
+## Technology Stack
 
-Multi-Agent Systems
-Multi-Agent Research Assistant: Collaborative research with specialized agents
+### Core Technologies
 
-AthenaCore: Multi-agent system with shared persistent memory
+| Technology | Purpose |
+|---|---|
+| Ollama | Local LLM hosting and inference |
+| FastAPI | Backend API development |
+| Streamlit | Frontend UI development |
+| TinyDB | Lightweight JSON database |
+| Pandas | Data processing and analysis |
+| Plotly | Interactive visualizations |
 
-Visual Timeline: Agent collaboration visualization
+### LLM Models
 
-Voice-Controlled Agent: Voice-enabled multi-agent interaction
+| Model | Projects | Size | RAM Required |
+|---|---|---|---|
+| LLaMA 2 | 1, 5, 7, 8, 11-25 | 3.8 GB | 8+ GB |
+| Mistral | 2, 6, 9, 10 | 4.1 GB | 8+ GB |
+| LLaVA | 3 | 4.5 GB | 8+ GB |
+| DeepSeek-Coder | 4 | 3.8 GB | 8+ GB |
+| Gemma:2b | 1 (alternative) | 1.4 GB | 4+ GB |
+| Phi-3 | 2, 4, 5 (alternatives) | 2.2 GB | 4+ GB |
+| Whisper | 5, 15 | ~1 GB | 4+ GB |
 
-Scheduled Workflow: Automated agent runs with scheduling
+### Specialized Libraries
 
-Document Intelligence: Collaborative document analysis
+| Library | Purpose | Projects |
+|---|---|---|
+| PyPDF2 | PDF text extraction | 17 |
+| python-docx | DOCX text extraction | 17 |
+| openai-whisper | Speech-to-text transcription | 5, 15 |
+| pyttsx3 | Text-to-speech synthesis | 15 |
+| sounddevice | Audio recording | 15 |
+| pydub | Audio processing and conversion | 5, 15 |
+| APScheduler | Task scheduling | 16 |
 
-Education & Learning
-AI Tutor & Quiz Generator: Educational content simplification and assessment
+---
 
-Agent-Guided Learning Coach: Personalized tutoring system
+## Project Overview
 
-Academic Research Collaborator: Research assistance for scholars
+| # | Project Name | Category | Key Technologies |
+|---|---|---|---|
+| 1 | Text Summarizer | NLP | LLaMA 2, FastAPI, Streamlit |
+| 2 | Sentiment Analyzer | NLP | Mistral, FastAPI, Streamlit |
+| 3 | Image Caption Generator | Vision | LLaVA, FastAPI, Streamlit, Pillow |
+| 4 | Code Review Assistant | Developer Tools | DeepSeek-Coder, FastAPI, Streamlit |
+| 5 | Meeting Notes Generator | Audio | Whisper, LLaMA 2, FastAPI, FFmpeg |
+| 6 | Product Review Analyzer | Business Intelligence | Mistral, FastAPI, Streamlit, Pandas |
+| 7 | Medical Note Structuring | Healthcare | LLaMA 2, FastAPI, Streamlit |
+| 8 | Legal Document Analyzer | Legal Tech | LLaMA 2, FastAPI, Streamlit |
+| 9 | Earnings Call Analyzer | Finance | Mistral, FastAPI, Streamlit |
+| 10 | AI Tutor & Quiz Generator | Education | Mistral, FastAPI, Streamlit |
+| 11 | Multi-Agent Research Assistant | Multi-Agent | LLaMA 2, Streamlit |
+| 12 | Persistent Memory Agent | Memory Systems | LLaMA 2, TinyDB, Streamlit |
+| 13 | AthenaCore | Multi-Agent | LLaMA 2, TinyDB, Streamlit |
+| 14 | Visual Timeline | Visualization | LLaMA 2, Plotly, Streamlit |
+| 15 | Voice-Controlled Agent | Voice AI | Whisper, pyttsx3, Streamlit |
+| 16 | Scheduled Agent Workflow | Automation | APScheduler, Streamlit |
+| 17 | Document Intelligence | Document Processing | PyPDF2, python-docx, Streamlit |
+| 18 | Agent-Guided Learning Coach | Education | LLaMA 2, Streamlit |
+| 19 | Cybersecurity Incident Agent | Security | LLaMA 2, Streamlit |
+| 20 | Mental Health Companion | Health Tech | LLaMA 2, Streamlit |
+| 21 | Travel Planning Assistant | Travel | LLaMA 2, Streamlit |
+| 22 | Agile Standup Tracker | Project Management | LLaMA 2, Streamlit |
+| 23 | Grant Proposal Assistant | Research | LLaMA 2, Streamlit |
+| 24 | Resume & Interview Coach | Career | LLaMA 2, Streamlit |
+| 25 | Academic Research Collaborator | Academia | LLaMA 2, Streamlit |
 
-Developer Tools
-Code Review Assistant: Code analysis, bug detection, and optimization
+---
 
-Resume & Interview Coach: Career preparation and job application support
+## Model Requirements
 
-Other Domains
-Image Caption Generator: Vision-language model for image description
+### Essential Models
 
-Travel Planning Assistant: AI-powered trip planning
-
-Cybersecurity Incident Agent: Security operations and incident response
-
-Technology Stack
-Core Technologies
-Technology	Purpose
-Ollama	Local LLM hosting and inference
-FastAPI	Backend API development
-Streamlit	Frontend UI development
-TinyDB	Lightweight JSON database
-Pandas	Data processing and analysis
-Plotly	Interactive visualizations
-LLM Models
-Model	Projects	Size	RAM Required
-LLaMA 2	1, 5, 7, 8, 11-25	3.8 GB	8+ GB
-Mistral	2, 6, 9, 10	4.1 GB	8+ GB
-LLaVA	3	4.5 GB	8+ GB
-DeepSeek-Coder	4	3.8 GB	8+ GB
-Gemma:2b	1 (alternative)	1.4 GB	4+ GB
-Phi-3	2, 4, 5 (alternatives)	2.2 GB	4+ GB
-Whisper	5, 15	~1 GB	4+ GB
-Specialized Libraries
-Library	Purpose	Projects
-PyPDF2	PDF text extraction	17
-python-docx	DOCX text extraction	17
-openai-whisper	Speech-to-text transcription	5, 15
-pyttsx3	Text-to-speech synthesis	15
-sounddevice	Audio recording	15
-pydub	Audio processing and conversion	5, 15
-APScheduler	Task scheduling	16
-Project Overview
-#	Project Name	Category	Key Technologies
-1	Text Summarizer	NLP	LLaMA 2, FastAPI, Streamlit
-2	Sentiment Analyzer	NLP	Mistral, FastAPI, Streamlit
-3	Image Caption Generator	Vision	LLaVA, FastAPI, Streamlit, Pillow
-4	Code Review Assistant	Developer Tools	DeepSeek-Coder, FastAPI, Streamlit
-5	Meeting Notes Generator	Audio	Whisper, LLaMA 2, FastAPI, FFmpeg
-6	Product Review Analyzer	Business Intelligence	Mistral, FastAPI, Streamlit, Pandas
-7	Medical Note Structuring	Healthcare	LLaMA 2, FastAPI, Streamlit
-8	Legal Document Analyzer	Legal Tech	LLaMA 2, FastAPI, Streamlit
-9	Earnings Call Analyzer	Finance	Mistral, FastAPI, Streamlit
-10	AI Tutor & Quiz Generator	Education	Mistral, FastAPI, Streamlit
-11	Multi-Agent Research Assistant	Multi-Agent	LLaMA 2, Streamlit
-12	Persistent Memory Agent	Memory Systems	LLaMA 2, TinyDB, Streamlit
-13	AthenaCore	Multi-Agent	LLaMA 2, TinyDB, Streamlit
-14	Visual Timeline	Visualization	LLaMA 2, Plotly, Streamlit
-15	Voice-Controlled Agent	Voice AI	Whisper, pyttsx3, Streamlit
-16	Scheduled Agent Workflow	Automation	APScheduler, Streamlit
-17	Document Intelligence	Document Processing	PyPDF2, python-docx, Streamlit
-18	Agent-Guided Learning Coach	Education	LLaMA 2, Streamlit
-19	Cybersecurity Incident Agent	Security	LLaMA 2, Streamlit
-20	Mental Health Companion	Health Tech	LLaMA 2, Streamlit
-21	Travel Planning Assistant	Travel	LLaMA 2, Streamlit
-22	Agile Standup Tracker	Project Management	LLaMA 2, Streamlit
-23	Grant Proposal Assistant	Research	LLaMA 2, Streamlit
-24	Resume & Interview Coach	Career	LLaMA 2, Streamlit
-25	Academic Research Collaborator	Academia	LLaMA 2, Streamlit
-Model Requirements
-Essential Models
 Pull these models to run the majority of projects:
 
-bash
+```bash
 # Core models
 ollama pull llama2
 ollama pull mistral
@@ -180,35 +192,40 @@ ollama pull llava
 
 # Code model
 ollama pull deepseek-coder
-Project-Specific Requirements
-Model	Required For
-llama2	Projects 1, 5, 7, 8, 11-25
-mistral	Projects 2, 6, 9, 10
-phi3	Faster alternative for projects 2, 4, 5
-llava	Project 3
-deepseek-coder	Project 4
-whisper	Projects 5, 15
-Installation Guide
-Prerequisites
-Python 3.8 or higher
+```
 
-Ollama installed and running
+### Project-Specific Requirements
 
-Git installed
+| Model | Required For |
+|---|---|
+| llama2 | Projects 1, 5, 7, 8, 11-25 |
+| mistral | Projects 2, 6, 9, 10 |
+| phi3 | Faster alternative for projects 2, 4, 5 |
+| llava | Project 3 |
+| deepseek-coder | Project 4 |
+| whisper | Projects 5, 15 |
 
-8GB+ RAM recommended
+---
 
-20GB+ free disk space for all models
+## Installation Guide
 
-General Project Setup
-bash
+### Prerequisites
+
+- Python 3.8 or higher
+- Ollama installed and running
+- Git installed
+- 8GB+ RAM recommended
+- 20GB+ free disk space for all models
+
+### General Project Setup
+
+```bash
 # Navigate to any project
 cd "Project-XX_ProjectName"
 
 # Create and activate virtual environment
 python -m venv venv
-venv\Scripts\activate        # Windows
-# source venv/bin/activate   # Mac/Linux
+venv\Scripts\activate
 
 # Install dependencies
 pip install -r requirements.txt
@@ -218,39 +235,46 @@ ollama pull llama2
 
 # Start the application
 streamlit run frontend/app.py
-Project Structure
+```
+
+---
+
+## Project Structure
+
 Each project follows a consistent structure:
 
-text
+```
 Project-XX_ProjectName/
 ├── backend/
-│   └── main.py          # FastAPI implementation
+│   └── main.py
 ├── frontend/
-│   └── app.py           # Streamlit UI
-├── agents/              # Agent definitions (multi-agent projects)
-├── memory/              # Persistent storage
-├── requirements.txt     # Dependencies
-├── README.md           # Project documentation
-└── .gitignore
-License
-This repository is open source and available under the MIT License.
+│   └── app.py
+├── agents/
+├── memory/
+├── requirements.txt
+└── README.md
+```
 
-Acknowledgments
-Ollama - Local LLM runtime
+---
 
-Meta - LLaMA 2
+## License
 
-Mistral AI - Mistral model
+This repository is open source and available under the [MIT License](LICENSE).
 
-OpenAI - Whisper
+---
 
-FastAPI - Web framework
+## Acknowledgments
 
-Streamlit - UI framework
+- [Ollama](https://ollama.com/) - Local LLM runtime
+- Meta - LLaMA 2
+- Mistral AI - Mistral model
+- OpenAI - Whisper
+- FastAPI - Web framework
+- Streamlit - UI framework
 
-TinyDB - Lightweight database
+---
 
-Contact
-GitHub: Esha-Mirza
+## Contact
 
-Email: esha101374@email.com
+- **GitHub:** [Esha-Mirza](https://github.com/Esha-Mirza)
+- **Email:** esha101374@gmail.com
